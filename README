@@ -2,7 +2,7 @@ This is an example application that uses Tornado and RabbitMQ to push data from 
 
 How To Use
 ==========
-Install dependencies wit pip
+Install dependencies with pip
 
 Execute python app.py in the src folder
 
