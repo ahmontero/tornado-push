@@ -1,0 +1,13 @@
+This is an example application that uses Tornado and RabbitMQ to push data from server to connected clients.
+
+How To Use
+==========
+Install dependencies wit pip
+
+Execute python app.py in the src folder
+
+Open http://127.0.0.1:8888/ in a browser
+
+Open http://127.0.0.1:8888/producer in an other browser or tab
+
+When request to http://127.0.0.1:8888/producer finishes, all the connected client will be upadted

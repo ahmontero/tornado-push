@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Pika/Tornado Example</title>
+        <link rel="icon" type="/image/vnd.microsoft.icon" href="http://www.rabbitmq.com/favicon.ico" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+        <script type="text/javascript">
+
+            function connect() {
+                var host = 'ws://' + window.location.host + '/consumer';
+                var websocket = new WebSocket(host);
+
+                websocket.onopen = function (evt) { };
+                websocket.onmessage = function(evt) {
+                    $('ul').prepend('<li>' + $.parseJSON(evt.data)['msg'] + '</li>');
+                };
+                websocket.onerror = function (evt) { };
+            };
+
+            $(document).ready(function(){
+                connect();
+            });
+
+        </script>
+        <style type="text/css">html {font-family: Helvetica,Arial,Sans-Serif;font-size: 12px;}</style>
+
+    </head>
+    <body>
+        <h1>Pika/Tornado Example</h1>
+        <p>Connected to RabbitMQ: <strong>{{ connected }}</strong></p>
+        <p>Open in another browser the url <a href="http://localhost:8888/producer">http://localhost:8888/producer</a> and wait here to see the results. You can open this page in several browsers / tabs to see the results</p>
+        <h2>Messages Received Asynchronously from RabbitMQ</h2>
+        <ul>
+        </ul>
+    </body>
+</html>
