@@ -10,4 +10,4 @@ Open http://127.0.0.1:8888/ in a browser
 
 Open http://127.0.0.1:8888/producer in an other browser or tab
 
-When request to http://127.0.0.1:8888/producer finishes, all the connected client will be upadted
+When request to http://127.0.0.1:8888/producer finishes, all the connected clients will be updated
